@@ -1,0 +1,48 @@
+#page-page2 {
+	height: 100vh;
+	min-height: 600px;
+	@include bg-cover;
+	.page-header {
+		background-color: $header-bk-color;
+	}
+	@include media('<phone') {
+		min-height: 750px;
+	}
+	.avatar {
+		a {
+			color: #FFF;
+			&:hover {
+				color: #FFF;
+			}
+		}
+	}
+	.jumbotron {
+		background-color: transparent;
+		box-shadow: none;
+		text-align: center;
+		color: #000;
+		padding-top: 100px;
+		h1 {
+			font-size: 5em;
+		}
+	}
+	.page-header {
+		height: auto;
+	}
+	main {
+		.card {
+			color: #000;
+		  background-color: rgba(120, 144, 156, 0.7);
+			ul.card-text {
+				li:before {
+					font-family: 'FontAwesome';
+					content: '\f00c';
+					margin:0 5px 0 15px;
+				}
+			}
+		}
+	}
+	h1, h2 {
+		font-weight: bold;
+	}
+}

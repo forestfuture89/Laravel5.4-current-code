@@ -1,0 +1,54 @@
+#page-message {
+	.msg-container {
+		box-shadow: 0 0 0.5rem $gray;
+		height: calc(100vh - 200px);
+		padding: 1rem;
+		.msg-title {
+			h4 {
+				font-size: 1.8rem;
+				font-weight: bold;
+				margin-bottom: 0.5rem;
+			}
+			h5 {
+				font-size: 1.7rem;
+			}
+		}
+		.msg-list {
+			overflow: auto;
+			height: calc(100% - 11rem);
+		}
+		.msg-people {
+			overflow: auto;
+			height: 100%;
+			.msg-p-body {
+				width: calc(100% - 50px);
+			}
+			a {
+				color: $black;
+				&:hover {
+					color: $black;
+				}
+			}
+			& > a.active {
+				background-color: $super-light-gray;
+			}
+		}
+		.msg-input {
+			display: flex;
+			border: 1px solid $gray;
+			padding: 0.3rem;
+			margin-left: 1rem;
+			input[type=text] {
+				padding-left: 0;
+			    padding-right: 0;
+			    margin-right: 3rem;
+			    height: 3rem;
+			}
+			a {
+				margin: 0;
+				font-size: 1.3rem;
+			}
+		}
+	}
+	
+}

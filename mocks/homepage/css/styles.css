@@ -1,0 +1,79 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+h2, h4, h5 {
+  font-weight: 400;
+}
+
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h4 {
+    line-height: 2rem
+  }
+  p {
+    font-size: 1.3rem
+  }
+}
+
+.absolute-top {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.bg-primary {
+  background-color: #4285F4;
+}
+
+.bg-secondary {
+  background-color: #f0f0f0;
+}
+
+.btn-primary {
+  background: #111;
+  border-color: #111;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    background: #4285F4;
+  }
+}
+
+#cover-img {
+  background-image: url('../assets/background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 7.5rem;
+  padding-bottom: 7.6rem;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+.featurette i.material-icons {
+  font-size: 45px;
+}
+
+.featurette i.material-icons:not(.text-white) {
+  color: #111;
+}
+
+.featurette p {
+  opacity: .75;
+}

@@ -1,0 +1,54 @@
+.dataTables_wrapper {
+  .hide {
+    display: none;
+  }
+   thead th:hover,
+   thead th:hover > span:hover {
+     cursor: pointer !important;
+   }
+  .dataTables_paginate {
+     ul {
+       display: inline-flex;
+     }
+     .disabled > a {
+        color: #636c72;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+     .active > a {
+        z-index: 2;
+        color: #fff;
+        background-color: #0275d8;
+        border-color: #0275d8;
+      }
+      .paginate_button > a {
+        display: block;
+        padding: .5rem .75rem;
+        line-height: 1.25;
+      }
+  }
+  .row {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .row > div {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .justify-content-center{
+    text-align: center;
+  }
+  .btn {
+    font-size: 1.5rem !important;
+    width: 100%;
+  }
+  .dropdown-menu {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .btn-group {
+    font-size: 1.5rem !important;
+    width: 100%;
+  }
+}

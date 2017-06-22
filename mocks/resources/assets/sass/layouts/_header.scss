@@ -1,0 +1,144 @@
+.page-header {
+	position: relative;
+	height: 86px;
+	@include media('<tablet') {
+		height: 57px;
+	}
+	nav.navbar {
+		background-color: $header-bk-color;
+		ul.navbar-nav {
+			font-size: 1.5rem;
+			@include media('>=992px') {
+				.nav-item {
+					a {
+						padding-left: 1.5rem;
+						padding-right: 1.5rem;
+					}
+					& + .nav-item {
+						margin-left: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+.logo {
+	display: inline-block;
+	width: 350px;
+	a {
+		display: table;
+		align-items: center;
+		font-weight: 400;
+		color: #FFF;
+		&:hover {
+			color: #FFF;
+		}
+		img {
+			padding: 0.66rem 1rem;
+		    width: 4.66rem;
+		    display: table-cell;
+		}
+		span {
+			font-size: 1.5rem;
+		    text-transform: uppercase;
+		    display: table-cell;
+		    vertical-align: middle;
+		    @include media('<phone') {
+		    	display: none;
+		    }
+		}
+	}
+}
+.avatar {
+	position: absolute;
+	right: 0;
+	top: 1rem;
+	display: flex;
+	align-items: center;
+	img {
+		vertical-align: top;
+		width: 4rem;
+	    border-radius: 50%;
+	    border-color: #FFF;
+	    border-width: 1px;
+	    border-style: solid;
+	    margin-right: 5px;
+	}
+	.user {
+		.user-name, .user-role {
+			font-size: 1.33rem;
+			display: block;
+			color: $white;
+		}
+	}
+	&>a {
+		display: flex;
+		align-items: center;
+	}
+	.notification {
+		position: relative;
+		padding-right: 1.5rem;
+		i {
+			color: #fff;
+			font-size: 3rem;
+		}
+		.notification-alert {
+			width: 10px;
+		    height: 10px;
+		    left: 0;
+		    top: 0;
+		    position: absolute;
+		    background: #FF5722;
+		    border-radius: 50%;
+		}
+		.notification-block {
+			position: absolute;
+			width: 200px;
+			right: 0;
+			top: 4rem;
+			background-color: #FFF;
+			border: 1px solid #CCC;
+			font-size: 1.2rem;
+			z-index: 1;
+			.notification-item {
+				border-bottom: 1px solid #CCC;
+			    padding: 1rem;
+			    &.unread {
+			    	background: #e8fcfc;
+			    	font-weight: 500;
+			    }
+			    a {
+			    	display: block;
+			    	color: $dark-gray;
+			    	&:hover {
+			    		color: $black;
+			    	}
+			    }
+			    .freshness {
+			    	font-size: 1.2rem;
+			    	color: $light-gray;
+			    }
+			}
+			display: none;
+			&.show {
+				display: block;
+			}
+			@include media('<phone') {
+				right: -100px;
+			}
+			.see-all {
+				text-align: center;
+				padding: 10px 0;
+				a {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	@include media('<991px') {
+		right: 5rem;
+	}
+}
+#main_nav {
+	margin-left: 30px;
+}

@@ -1,0 +1,276 @@
+// ---------------------------------------------------------
+// Custom mixins
+// ---------------------------------------------------------
+
+@mixin v-align($va-height: 100%, $va-direction: middle, $va-pseudo: after) {
+  white-space: nowrap;
+  text-align: center;
+
+  &:#{$va-pseudo} {
+    content: '';
+    display: inline-block;
+    vertical-align: $va-direction;
+    width: 0;
+    min-height: $va-height;
+  }
+
+  > * {
+    white-space: normal;
+    display: inline-block;
+    vertical-align: $va-direction;
+    max-width: 99%;
+    margin-left: -0.5em;
+  }
+}
+
+@mixin v-align-pair($child-name1, $child-name2, $valign: middle, $width1: auto, $width2: auto ) {
+  display: table;
+  .#{$child-name1}{
+    display: table-cell;
+    vertical-align: $valign;
+    width: $width1; 
+  }
+ .#{$child-name2} {
+    display: table-cell;
+    vertical-align: $valign;
+    width: $width2;
+  }
+}
+
+
+// vertical align el
+// usage: @include vertical-align-el;
+//
+@mixin vertical-align-el {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// font-smothing
+@mixin font-smoothing($value:on){
+  @if $value == on{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  @else{
+    -webkit-font-smoothing:subpixel-antialiased;
+    -moz-osx-font-smoothing:auto;
+  }
+}
+
+
+/// Hides the text in an element, commonly used to show an image. Some elements will need block-level styles applied.
+///
+/// @link http://zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+
+/// Creates a visual triangle. 
+/// Mixin takes ($size, $color, $direction)
+@mixin triangle($size, $color, $direction) {
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+  $foreground-color: nth($color, 1);
+  $background-color: if(length($color) == 2, nth($color, 2), transparent);
+  height: 0;
+  width: 0;
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    $width: $width / 2;
+    $height: if(length($size) > 1, $height, $height/2);
+
+    @if $direction == up {
+      border-bottom: $height solid $foreground-color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+    } @else if $direction == right {
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+    } @else if $direction == left {
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    }
+  } @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction == up-right {
+      border-left:  $width solid $background-color;
+    } @else if $direction == up-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction == down-right {
+      border-left:  $width solid $background-color;
+    } @else if $direction == down-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction == inset-up) {
+    border-color: $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction == inset-down) {
+    border-color: $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction == inset-right) {
+    border-color: $background-color $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $width $height;
+  } @else if ($direction == inset-left) {
+    border-color: $background-color $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $width $height;
+  }
+}
+
+
+/// Animate css properties
+// usage 
+// scss - @include animate(color);
+//     or @include animate(color width);
+//     or @include animate(color width, 1s, linear);
+//
+$animation-speed: .3s !default;
+
+@mixin animate($properties, $duration: $animation-speed, $easing: ease-in-out) {
+  $list:();
+  @each $prop in $properties {
+    $str: #{$prop} #{$animation-speed} #{$easing};
+    $list: join($list, $str, comma);
+  }
+  transition: $list;
+}
+
+/// Font-size px to rem calc
+/// @example scss - Usage
+/// selector {
+///    @include rem-font-size(16px);
+/// }
+
+@mixin rem-font-size($pxSize) {
+  font-size: $pxSize;
+  font-size: ($pxSize / 10px) + rem;
+}
+
+//font mixin
+@mixin font($font-size, $line-height, $font-weight:normal) {
+  font-size:$font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+// flex
+@mixin flex($justify: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify;
+}
+
+// sprite
+@mixin sprite($x-pos:0, $y-pos:0) {
+  @extend %sprite;
+  background-position: $x-pos $y-pos;
+}
+
+// custom gutter
+@mixin custom-gutter($gutter: 30px) {
+  @extend %clearfix;
+  margin: 0 -#{$gutter/2};
+
+  [class*="col-"],
+  [class^="col-"] {
+    padding: 0 $gutter/2;
+  }
+}
+
+
+
+@mixin bg-cover($img_url: null) {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  @if $img_url != null {
+    background-image: url($img_url);
+  }
+}
+
+@mixin bg-contain($img_url: null) {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  @if $img_url != null {
+    background-image: url($img_url);
+  }
+}
+
+@mixin bg-hundred($img_url: null) {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  @if $img_url != null {
+    background-image: url($img_url);
+  }
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin object-fit($val: cover) {
+  object-fit: $val; 
+  -webkit-object-fit: $val; 
+  -moz-object-fit: $val;  
+  -ms-object-fit: $val; 
+  -o-object-fit: $val;  
+  /** available values: fill, cover, contain, unset, initial, inherit, scale-down, none**/      
+}
+
+@mixin object-position($posX: center, $posY: center) {
+  object-position: $posX $posY;
+  -webkit-object-position: $posX $posY;
+  -moz-object-position: $posX $posY;
+  -ms-object-position: $posX $posY;
+  -o-object-position: $posX $posY;
+}
+
+@mixin object-fit-position($fit: cover, $x_position: center, $y_position: center) {
+  object-fit: $fit;  
+  -webkit-object-fit: $fit;  
+  -moz-object-fit: $fit; 
+  -ms-object-fit: $fit;  
+  -o-object-fit: $fit;       
+
+  object-position: $x_position $y_position;
+  -webkit-object-position: $x_position $y_position;
+  -moz-object-position: $x_position $y_position;
+  -ms-object-position: $x_position $y_position;
+  -o-object-position: $x_position $y_position;
+}

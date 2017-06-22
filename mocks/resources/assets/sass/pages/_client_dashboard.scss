@@ -1,0 +1,29 @@
+.add-tender-container {
+	padding-right: 2rem;
+	text-align: right;
+}
+.tenders-container {
+	.card {
+		border-radius: 0;
+		background-color: #FFF;
+	}
+	.table-container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+#page-client-dashboard {
+	.open-tenders {
+		.btn {
+		    font-size: 1.7rem;
+		}
+		.dropdown-menu {
+		    font-size: 1.5rem;
+		}
+	}
+	@include media('>480px') {
+		.table-responsive {
+			overflow-x: visible;
+		}
+	}
+}

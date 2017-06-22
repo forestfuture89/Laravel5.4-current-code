@@ -1,0 +1,33 @@
+#page-c-add-tenders {
+	padding-bottom: 5rem;
+	.form-container {
+		.md-form {
+			float: left;
+			width: 100%;
+
+			.card {
+				margin-top: 20px;
+				@media(min-width:768px) {
+					margin-left: 50px;
+					margin-right: 50px;
+				}
+			}
+
+			.docs {
+				margin: 10px 0 0 10px;
+			}
+		}
+		#tender_name.form-control {
+			font-size: 30px;
+			padding: 30px 0 30px 8px;
+		}
+		#tender_desc {
+			padding: 10px 0 10px 8px;
+			resize: none;
+			box-sizing: content-box;
+		}
+	}
+	.submit-button button {
+		margin-top: 20px;
+	}
+}

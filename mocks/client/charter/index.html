@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OSX</title>
+    <link href="../../public/css/app.css" rel="stylesheet" type='text/css' />
+</head>
+
+<body class="osx">
+    <script src="../../public/js/app.js" type="text/javascript"></script>
+    <div id="page-charter">
+        <header class="page-header">
+            <!--Navbar-->
+            <nav class="navbar fixed-top navbar-toggleable-md scrolling-navbar navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="logo">
+                        <a href="../dashboard.html">
+                            <img src="../../resources/assets/images/osx-logo.png" />
+                            <span>
+                                The Offshore Exchange
+                            </span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main_nav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard.html">Tender</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Charter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/message.html">Message</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="avatar">
+                        <div class="notification">
+                            <span class="notification-alert"></span>
+                            <a href=""><i class="fa fa-bell" aria-hidden="true"></i></a>
+                            <div class="notification-block">
+                                <div class="notification-item unread">
+                                    <a href="#">John Smith Enterprises submitted a bid for Job A</a>
+                                    <span class="freshness">3 hrs ago</span>
+                                </div>
+                                <div class="notification-item unread">
+                                    <a href="#">Your tender Job A is now open for bidding</a>
+                                    <span class="freshness">7 hrs ago</span>
+                                </div>
+                                <div class="notification-item unread">
+                                    <a href="#">John Doe Enterprises submitted a bid for Job B</a>
+                                    <span class="freshness">11 hrs ago</span>
+                                </div>
+                                <div class="notification-item">
+                                    <a href="#">Your tender Job B is now open for bidding</a>
+                                    <span class="freshness">1 day ago</span>
+                                </div>
+                                <div class="see-all">
+                                    <a href="/notifications.html">See All</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/account.html">
+                            <img src="../../resources/assets/images/avatar.jpg" />
+                            <div class="user">
+                                <span class="user-name">Brittan M. S. Breaux</span>
+                                <span class="user-role">E&amp;P Operator</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="page-main">
+            <div class="container">
+                <ol class="breadcrumb mt-2">
+                  <li class="breadcrumb-item"><a href="/client/dashboard.html">Tender</a></li>
+                  <li class="breadcrumb-item active">Charter</li>
+                </ol>
+                <div class="page-title-container">
+                    <div class="page-title">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <h1>
+                            Charter
+                        </h1>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="content">
+                        <div class="filter">
+                            <form action="" class="filter-form">
+                                <span class="title">
+                                    Filter:
+                                </span>
+                                <div class="filter-comp">
+                                    <input type="text" placeholder="Vessel Type" />
+                                </div>
+                                <div class="filter-comp">
+                                    <input type="text" placeholder="Weight [LT]" />
+                                </div>
+                                <div class="filter-comp">
+                                    <input type="text" placeholder="Cargo Area [ft&sup2;]" />
+                                </div>
+                                <div class="filter-comp">
+                                    <input type="text" placeholder="Passenger [#]" />
+                                </div>
+                                <div class="filter-comp">
+                                    <input type="submit" class="btn-primary filter-submit" value="Search">
+                                </div>
+                                
+                            </form>
+                        </div>
+                        <div id="charter_map"></div>
+                        <div class="table-container">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <span class="tbh-title">Type</span>
+                                            </th>
+                                            <th>
+                                                <span class="tbh-title">Weight</span>
+                                            </th>
+                                            <th>
+                                                <span class="tbh-title">Deck Area</span>
+                                            </th>
+                                            <th>
+                                                <span class="tbh-title">Pax</span>
+                                            </th>
+                                            <th>
+                                                <span class="tbh-title">Price</span>
+                                            </th>
+                                            <th>
+                                                <span class="tbh-title">Action</span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="tbb-title">PSV</span>
+                                            </td>
+                                            <td>
+                                                1,000 LT
+                                            </td>
+                                            <td>
+                                                5,000 ft<sup>2</sup>
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                            <td>
+                                                $ / unit
+                                            </td>
+                                            <td>
+                                                <a href="" class="btn btn-primary">Charter</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="tbb-title">PSV</span>
+                                            </td>
+                                            <td>
+                                                500 LT
+                                            </td>
+                                            <td>
+                                                1,000 ft<sup>2</sup>
+                                            </td>
+                                            <td>
+                                                12
+                                            </td>
+                                            <td>
+                                                $ / unit
+                                            </td>
+                                            <td>
+                                                <a href="" class="btn btn-primary">Charter</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="tbb-title">FSV</span>
+                                            </td>
+                                            <td>
+                                                300 LT
+                                            </td>
+                                            <td>
+                                                400 ft<sup>2</sup>
+                                            </td>
+                                            <td>
+                                                25
+                                            </td>
+                                            <td>
+                                                $ / unit
+                                            </td>
+                                            <td>
+                                                <a href="" class="btn btn-primary">Charter</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
+                    </div>   
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>

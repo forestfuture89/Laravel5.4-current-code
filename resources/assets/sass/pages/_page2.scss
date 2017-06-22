@@ -1,0 +1,60 @@
+#page-page2 {
+	height: 100vh;
+	color: #FFF;
+	min-height: 600px;
+	@include bg-cover;
+	.page-header {
+		background-color: $header-bk-color;
+	}
+	@include media('<phone') {
+		min-height: 750px;
+	}
+	.avatar {
+		a {
+			color: #FFF;
+			&:hover {
+				color: #FFF;
+			}
+		}
+	}
+	main {
+		.title-container {
+			margin: 0 auto;
+			margin-top: 20vh;
+			margin-bottom: 4.66rem;
+			text-align: center;
+			width: 75%;
+			background-color: rgba(0, 0, 200, 0.2);
+			border-radius: 2rem;
+		    padding: 4.66rem 6.66rem;
+			h1 {
+				margin-bottom: 0;
+				font-size: 4.33rem;
+				font-weight: 400;
+				@include media('<tablet') {
+					font-size: 3.33rem;
+				}
+				@include media('<phone') {
+					font-size: 2.8rem;
+				}
+			}
+			@include media('<phone') {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+		.direction {
+			text-align: center;
+			.direction-container {
+			    padding: 0 2rem;
+				width: 25rem;
+			    display: inline-block;
+			    @include media('<533px') {
+			    	&:last-child {
+			    		margin-top: 20px;
+			    	}
+			    }
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.tenders-form {
+	.ctrl-wrap {
+		width: 25%;
+		@include media('<tablet') {
+			width: 50%;   
+		}
+		@include media('<phone') {
+			width: 100%;   
+		}
+	}
+}
+.form-container {
+	@include media('<tablet') {
+		.ctrl-wrap {
+			&:nth-child(3) {
+				order: 2;
+			}
+			&:nth-child(4) {
+				order: 5;
+			}
+			&:nth-child(7) {
+				order: 3;
+			}
+			&:nth-child(8) {
+				order: 4;
+			}
+		}
+	}
+}

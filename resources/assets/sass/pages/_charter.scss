@@ -1,0 +1,94 @@
+#page-charter {
+	.page-title-container {
+		padding-bottom: 2rem;
+		border-bottom: none;
+	}
+	table.table td a {
+		display: inline-block;
+	}
+	#charter_map {
+		height: 500px;
+		margin-bottom: 3rem;
+		z-index: 1;
+	}
+	.card {
+		background-color: $card-bk-color;
+		padding: 20px 30px;
+		border-radius: $border-radius-big;
+		text-align: center;
+		display: block;
+		.card-title {
+			background-color: #f1f1f1;
+		    color: #434343;
+		    text-align: center;
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+		    border-radius: $border-radius-base;
+		}
+		a {
+	        width: 100%;
+	        margin-left: 0;
+	        margin-right: 0;
+		}
+	}
+	.filter {
+		text-align: right;
+	    padding: 1rem 0;
+	    .title {
+	    	padding-right: 2rem;
+	    }
+	    .filter-comp {
+	    	display: inline-block;
+	    	border-radius: 3px;
+	    	margin-right: 1rem;
+	    	@include media('<480px') {
+	    		width: 35%;
+	    		margin-bottom: 1rem;
+	    	}
+	    }
+	    input[type=text] {
+	        text-align: center;
+	        padding-left: 0;
+	        padding-right: 0;
+	        border-bottom-color: #FFF;
+	        &:focus {
+	        	border-bottom: 1px solid #4285F4;
+	        }
+	    }
+	    .filter-form {
+    	    display: flex;
+    	    justify-content: flex-end;
+    	    margin-bottom: 1.5rem;
+    	    background: #CCC;
+    	    padding: 1rem;
+    	    @include media('<480px') {
+    	    	flex-wrap: wrap;
+    	    }
+    	    .filter-submit {
+    	    	font-size: 1.5rem;
+	    	    padding: 0.2rem 1rem;
+	    	    border: none;
+	    	    border-radius: 3px;
+	    	    cursor: pointer;
+    	    }
+	    }
+	}
+	.charter-detail {
+		width: 200px;
+		.photo {
+			width: 100%;
+		}
+		.spec {
+			background: rgb(38, 69, 139);
+			color: #FFF;
+			margin-top: 1rem;
+			padding: 1rem;
+			div span {
+				&:first-child {
+					padding-right: 1rem;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

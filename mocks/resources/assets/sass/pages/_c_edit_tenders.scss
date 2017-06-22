@@ -1,0 +1,21 @@
+#page-c-edit-tenders {
+	padding-bottom: 5rem;
+	.form-container {
+		.md-form {
+			float: left;
+			width: 100%;
+		}
+	}
+	.chip {
+		border-radius: 0;
+		a {
+			color: rgba(0, 0, 0, 0.6);
+			&:hover {
+				color: rgba(0, 0, 0, 0.9); 
+			}
+		}
+		.close {
+			padding-left: 2rem;
+		}
+	}
+}

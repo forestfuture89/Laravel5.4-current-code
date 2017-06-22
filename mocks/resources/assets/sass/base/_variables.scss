@@ -1,0 +1,48 @@
+// -------------------------------------------------------
+// custom variables and override bootstrap variables
+// -------------------------------------------------------
+
+$white: #fff;
+$black: #434343;
+$gray: #C1C1C1;
+$dark-gray: #666666;
+$light-gray: #999999;
+$super-light-gray: #f3f3f3;
+$blue: #00629b;
+$sidebar-bk-color: #3c78d8;
+$map-marker-color: #007df9;
+$header-bk-color: #3c78d8;
+$topbar-bk-color: #f3f3f3;
+$card-bk-color: #38b1ff;
+$header-title-color: #1c4587;
+$red-normal-color: #F44336;
+
+$font-path: "../../fonts";
+$image-path: "../../images";
+
+// font name
+$arial: 'Arial', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+
+// scaffolding
+$border-color: $gray;
+$text-color: $dark-gray;
+$link-color: $blue;
+
+// typography
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$font-size-h1: 48px;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2.9rem;
+$font-size-h4: 16px;
+$font-size-h5: 4rem;
+$font-size-h6: 14px;
+$headings-font-weight: 600;
+$border-radius-base:   2px;
+$border-radius-big:   2rem;
+
+
+// container sizes
+$container-width: 1550px;
+$grid-gutter-width: 30px;
+$container-large-desktop: (1096px + $grid-gutter-width);

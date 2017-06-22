@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OSX</title>
+
+    <link href="../public/css/app.css" rel="stylesheet" type='text/css' />
+</head>
+
+<body class="osx">
+    <script src="../public/js/app.js" type="text/javascript"></script>
+    <div id="page-client-dashboard">
+        <header class="page-header">
+            <!--Navbar-->
+            <nav class="navbar fixed-top navbar-toggleable-md scrolling-navbar navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../resources/assets/images/osx-logo.png" />
+                            <span>
+                                The Offshore Exchange
+                            </span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main_nav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link">Tender</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="charter/index.html">Charter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/message.html">Message</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="avatar">
+                        <div class="notification">
+                            <span class="notification-alert"></span>
+                            <a href=""><i class="fa fa-bell" aria-hidden="true"></i></a>
+                            <div class="notification-block">
+                                <div class="notification-item unread">
+                                    <a href="#">John Smith Enterprises submitted a bid for Job A</a>
+                                    <span class="freshness">3 hrs ago</span>
+                                </div>
+                                <div class="notification-item unread">
+                                    <a href="#">Your tender Job A is now open for bidding</a>
+                                    <span class="freshness">7 hrs ago</span>
+                                </div>
+                                <div class="notification-item unread">
+                                    <a href="#">John Doe Enterprises submitted a bid for Job B</a>
+                                    <span class="freshness">11 hrs ago</span>
+                                </div>
+                                <div class="notification-item">
+                                    <a href="#">Your tender Job B is now open for bidding</a>
+                                    <span class="freshness">1 day ago</span>
+                                </div>
+                                <div class="see-all">
+                                    <a href="/notifications.html">See All</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="account.html">
+                            <img src="../resources/assets/images/avatar.jpg" />
+                            <div class="user">
+                                <span class="user-name">Brittan M. S. Breaux</span>
+                                <span class="user-role">E&amp;P Operator</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="page-main">
+            <div class="container">
+                <ol class="breadcrumb mt-2">
+                  <li class="breadcrumb-item active">Tender</li>
+                </ol>
+                <div class="table-container">
+                    <h2>Open Tenders</h2>
+                    <div class="table-responsive open-tenders card">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th><span class="tbh-title">Tender Name</span></th>
+
+                                    <th><span class="tbh-title">Service</span></th>
+                                    <th><span class="tbh-title">Description</span></th>
+                                    <th>
+                                        <span class="tbh-title">Tender Doc</span>
+                                        <span class="tbh-follow">(File)</span>
+                                    </th>
+                                    <th><span class="tbh-title">Post Date</span></th>
+
+                                    <th>
+                                        <span class="tbh-title">Tender Bid</span>
+                                        <span class="tbh-follow">(File)</span>
+                                    </th>
+                                    <th><span class="tbh-title">Deadline</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a class="tbb-title" href="tender/view.html">Job A</a></td>
+                                    <td>Vessel</td>
+                                    <td>FSV - hotshot</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tender Docs</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Main Doc</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 1</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 2</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 3</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>2/1/17</td>
+
+                                    <td>
+                                        <a class="tbb-title" href="tender/view.html">0 Bids</a>
+                                    </td>
+                                    <td>4 days left</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="tbb-title" href="tender/view.html">Job B</a></td>
+                                    <td>Vessel</td>
+                                    <td>FSV - 7 day</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tender Docs</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Main Doc</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 1</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 2</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 3</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>1/29/17</td>
+
+                                    <td>
+                                        <a class="tbb-title" href="tender/view.html">3 Bids</a>
+                                    </td>
+                                    <td>1 day left</td>
+                                </tr>
+                                <tr>
+                                    <td><a class="tbb-title" href="tender/view.html">Job D</a></td>
+                                    <td>Vessel</td>
+                                    <td>PSV - 90 day</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tender Docs</button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Main Doc</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 1</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 2</a>
+                                                <a class="dropdown-item" href="#">Supporting Doc 3</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>1/17/17</td>
+
+                                    <td>
+                                        <a class="tbb-title" href="tender/view.html">1 bid</a>
+                                    </td>
+                                    <td>3 day left</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav class="pt-2 mb-2 border-t-1">
+                          <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                              <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="add-tender-container text-center" style="width: 100%">
+                    <a href="tender/post.html" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Post Tender</a>
+                </div>
+
+                <h2>Contracts</h2>
+                <div class="tenders-container last-container">
+                    <div class="tabs-wrapper"> 
+                        <ul class="nav classic-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link waves-light active" data-toggle="tab" href="#active_tenders" role="tab">Active (2)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-light" data-toggle="tab" href="#closed_tenders" role="tab">Completed / Ended (3)</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content card">
+                        <div class="tab-pane fade in show active" id="active_tenders" role="tabpanel">
+                            <div class="table-container">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th><span class="tbh-title">Tender Name</span></th>
+                                                <th><span class="tbh-title">Award Date</span></th>
+                                                <th><span class="tbh-title">Deadline</span></th>
+                                                <th><span class="tbh-title">Service</span></th>
+                                                <th><span class="tbh-title">Description</span></th>
+                                                <th>
+                                                    <span class="tbh-title">Status</span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a class="tbb-title" href="tender/view.html">Job E</a></td>
+                                                <td>1/17/17</td>
+                                                <td>3 days left</td>
+                                                <td>Vessel</td>
+                                                <td>PSV - 90 day</td>
+                                                <td>
+                                                    <span class="tbb-status">Contract awarded to <strong>John Smith Incorporated</strong> on 2/1/17.</span>
+                                                    <a href="tender/view.html" class="tbb-follow">View Contract</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="tbb-title" href="tender/view.html">Job F</a></td>
+                                                <td>1/19/17</td>
+                                                <td>7 days left</td>
+                                                <td>Vessel</td>
+                                                <td>FSV - 7 day</td>
+                                                <td>
+                                                    <span class="tbb-status">Contract awarded to <strong>John Smith Incorporated</strong> on 2/3/17.</span>
+                                                    <a href="tender/view.html" class="tbb-follow">View Contract</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <nav class="pt-2 mb-2 border-t-1">
+                                      <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                          <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                          </a>
+                                        </li>
+                                        <li class="page-item active">
+                                          <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="closed_tenders" role="tabpanel">
+                            <div class="table-container">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><span class="tbh-title">Tender Name</span></th>
+                                                <th><span class="tbh-title">Post Date</span></th>
+                                                <th><span class="tbh-title">Deadline</span></th>
+                                                <th><span class="tbh-title">Service</span></th>
+                                                <th><span class="tbh-title">Description</span></th>
+                                                <th>
+                                                    <span class="tbh-title">Status</span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a class="tbb-title" href="tender/view.html">Job H</a></td>
+                                                <td>1/17/16</td>
+                                                <td>2/6/16</td>
+                                                <td>Vessel</td>
+                                                <td>PSV - 90 day</td>
+                                                <td>
+                                                    <span class="tbb-status">Contract awarded to <strong>John Smith Incorporated</strong> on 2/1/16.</span>
+                                                    <a href="tender/view.html" class="tbb-follow">View Contract</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a class="tbb-title" href="tender/view.html">Job J</a></td>
+                                                <td>1/19/16</td>
+                                                <td>2/4/16</td>
+                                                <td>Vessel</td>
+                                                <td>FSV - hotshot</td>
+                                                <td>
+                                                    <span class="tbb-status">Contract awarded to <strong>John Smith Incorporated</strong> on 2/3/16.</span>
+                                                    <a href="tender/view.html" class="tbb-follow">View Contract</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="tbb-title">Job K</span></td>
+                                                <td>1/27/16</td>
+                                                <td>2/1/16</td>
+                                                <td>Vessel</td>
+                                                <td>FSV - 7 day</td>
+                                                <td>
+                                                    <span class="tbb-status">Contract awarded to <strong>John Smith Incorporated</strong> on 2/21/16.</span>
+                                                    <a href="tender/view.html" class="tbb-follow">View Contract</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <nav class="pt-2 mb-2 border-t-1">
+                                      <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                          <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                          </a>
+                                        </li>
+                                        <li class="page-item active">
+                                          <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
